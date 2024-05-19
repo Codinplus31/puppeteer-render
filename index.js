@@ -19,7 +19,7 @@ axios.get('https://app.scrapingbee.com/api/v1', {
     }
 }).then(function (response) {
     // handle success
-    console.log(response);
+    res.send(response);
 })
 });
 
