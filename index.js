@@ -15,7 +15,7 @@ app.get("/check", (req, res) => {
 axios.get('https://app.scrapingbee.com/api/v1', {
     params: {
         'api_key': 'RRC2WHFNTJLNVX7WNSU4YLRGF5CEDLBYZ9CXBFNPAQ4YG4YJ7W79DPF3DZ88EP0B7701J8NWRLYU9WY5',
-        'url': 'http://ipinfo.io/json',
+        'url': 'https://watchoutmovies.vercel.app',
     }
 }).then(function (response) {
     // handle success
