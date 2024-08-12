@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 app.get("/", (req, res) => {
   res.send("server is up and running!");
 });
-app,get('/scrape',scrapeLogic)
+app.get('/scrape',scrapeLogic)
 app.get("/check", (req, res) => {
  const axios = require('axios');
 
