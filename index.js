@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-// const { scrapeLogic } = require("./scrapeLogic");
+const { scrapeLogic } = require("./scrapeLogic");
 const app = express();
 
 const PORT = process.env.PORT || 4000;
@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 app.get("/", (req, res) => {
   res.send("server is up and running!");
 });
-
+app,get('/scrape',scrapeLogic)
 app.get("/check", (req, res) => {
  const axios = require('axios');
 
