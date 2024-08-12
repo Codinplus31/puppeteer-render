@@ -1,7 +1,8 @@
 const puppeteer = require("puppeteer");
 require("dotenv").config();
 
-const scrapeLogic = async (res) => {
+const scrapeLogic = async (req, res) => {
+  
   const browser = await puppeteer.launch({
     args: [
       "--disable-setuid-sandbox",
@@ -18,7 +19,7 @@ const scrapeLogic = async (res) => {
     
 
     const page = await browser.newPage();
-    await page.goto('https://watchoutmovies.vercel.app/');
+    await page.goto(req.query.url);
     const screenshot = await page.screenshot();
 
     res.set('Content-Type', 'image/png');
